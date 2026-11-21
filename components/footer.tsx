@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerContact, navLinks, quickLinks, socials } from "@/lib/content";
+import { Logo } from "./logo";
 import { container } from "./ui";
 
 const heading = "mb-5 text-[12px] uppercase tracking-[.28em] text-gold";
@@ -10,9 +11,7 @@ export function Footer() {
       <div className={container}>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-12 border-b border-cream/15 pb-14">
           <div className="max-w-80">
-            <div className="font-serif text-[30px] font-light uppercase tracking-[.18em] text-cream">
-              Event<span className="text-gold">ora</span>
-            </div>
+            <Logo className="text-[28px] text-cream" />
             <p className="mt-5 font-serif text-xl italic">We create while you celebrate.</p>
           </div>
           <div>

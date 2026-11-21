@@ -1,24 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "@/lib/content";
+import { Logo } from "./logo";
 import { Button, container } from "./ui";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col overflow-hidden bg-ink-deep text-cream">
-      <video
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        <source src="/hero/video.mp4" type="video/mp4" />
-      </video>
+      <Image
+        src="/hero/image2.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="hero-zoom object-cover"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,15,36,.8)_0%,rgba(122,74,158,.3)_45%,rgba(217,138,170,.18)_70%,rgba(25,15,36,.9)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,15,36,.78)_0%,rgba(48,26,66,.6)_50%,rgba(25,15,36,.9)_100%)]"
       />
 
       <header className={`relative z-10 w-full ${container}`}>
@@ -26,9 +25,8 @@ export function Hero() {
           <Link
             href="/"
             aria-label="Eventora home"
-            className="font-serif text-[30px] font-light uppercase tracking-[.18em]"
-          >
-            Event<span className="text-gold">ora</span>
+            className="text-[28px]">
+            <Logo />
           </Link>
           <nav
             aria-label="Main"
@@ -49,16 +47,14 @@ export function Hero() {
       >
         <p className="mb-8 flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[.4em] text-gold">
           <span aria-hidden="true" className="h-px w-10 bg-gold" />
-          Crafting your experience
+          Weddings · Events · Celebrations
           <span aria-hidden="true" className="h-px w-10 bg-gold" />
         </p>
-        <h1 className="max-w-[1000px] font-serif text-[clamp(42px,7vw,100px)] font-light leading-[1.02] tracking-[-.02em]">
-          Creating unforgettable weddings &amp; <em className="text-gold">extraordinary</em>{" "}
-          celebrations.
+        <h1 className="max-w-[1000px] font-serif text-[clamp(34px,5vw,72px)] font-light leading-[1.02] tracking-[-.02em]">
+          Where every celebration becomes a <em className="text-gold">timeless</em> memory.
         </h1>
         <p className="mt-8 max-w-[560px] text-[18px] font-medium text-white [text-shadow:0_2px_12px_rgba(0,0,0,.7)]">
-          Weddings, corporate gatherings and private celebrations, planned, styled and
-          produced end to end by one calm, obsessive team.
+          From the first mood board to the final farewell, we design, decorate and direct your day so you can simply be present.
         </p>
         <div className="mt-11 flex flex-wrap justify-center gap-4">
           <Button href="/#contact">Plan your event</Button>
